@@ -34,7 +34,7 @@ for i from 1 to nA repeat
     B[i] <-- A[i]
 ```
 
-### Parameters
+### Inputs and Outputs
 In our pseudocodes, we're going to write both the inputs and outputs
 in the function parameters.
 

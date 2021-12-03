@@ -1,0 +1,29 @@
+{
+  "name": "art-algorithms",
+  "version": "1.0.0",
+  "description": "Project used to study and practice common Computer Science algorithms",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brantac/art-algorithms.git"
+  },
+  "keywords": [
+    "algorithms",
+    "sorting"
+  ],
+  "author": "Arthur Caldeira Brant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brantac/art-algorithms/issues"
+  },
+  "homepage": "https://github.com/brantac/art-algorithms#readme",
+  "devDependencies": {
+    "typescript": "^4.5.2"
+  }
+}

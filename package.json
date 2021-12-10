@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "rm -rf dist/ && tsc && node dist/tests/ts/test_bubbleSort.js",
+    "test": "rm -rf dist/ && tsc && node dist/tests/ts/sort_test.js",
     "tsc": "tsc"
   },
   "repository": {

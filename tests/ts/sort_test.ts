@@ -1,42 +1,55 @@
 import  bubbleSort from '../../sort/ts/bubbleSort';
 import insertionSort from '../../sort/ts/insertionSort';
+import selectionSort from '../../sort/ts/selectionSort';
 
 function main(): void {
-    let listB: number[] = (new Array(50000)).fill(0);
     let listA: number[] = (new Array(50000)).fill(0);
+    let listB: number[] = (new Array(50000)).fill(0);
+    let listC: number[] = (new Array(50000)).fill(0);
 
     // Fill the arrays with random numbers
     listA.map((e, i) => listA[i] = Math.round(Math.random() * 100000));
     listB.map((e, i) => listB[i] = Math.round(Math.random() * 100000));
+    listC.map((e, i) => listC[i] = Math.round(Math.random() * 100000));
 
-    // Sort lists
+    // Sort start
     console.time('sort-list-a')
     bubbleSort(listA);
     console.timeEnd('sort-list-a');
+
     console.time('sort-list-b');
     insertionSort(listB);
     console.timeEnd('sort-list-b')
 
+    console.time('sort-list-c');
+    selectionSort(listC);
+    console.timeEnd('sort-list-c')
+    // /Sort end
+
     // Log lists
     logList(listA, 'A');
     logList(listB, 'B');
+    logList(listC, 'C');
 }
 
 const logList = function (l: number[], name: string): void {
     let size = l.length;
-    console.log(`List ${name}`);
+    let list: number[] = [], cont = 0;
+    console.log(`--- List ${name} ---`);
     if (size <= 50) console.log(l)
     else {
-        console.log("Elementos do inicio da lista")
+        // Insert first elements from sorted array
         for (let i = 0; i < 10; i++) {
-            console.log(l[i]);
+            list[cont] = l[i];
+            cont++;
         }
-        
-        console.log("Elementos do fim da lista")
+        // Insert last elements from sorted array
         for (let i = size - 1; i > size - 10; i--) {
-            console.log(l[i]);
+            list[cont] = l[i];
+            cont++;
         }
     }
+    console.log(list);
 }
 
 const isOrdered = (list: number[], ascending: boolean): boolean => {

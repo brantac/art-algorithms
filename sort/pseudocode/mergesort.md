@@ -54,11 +54,12 @@ merge(A, f, m, l)
     for i from (m+1) to l repeat
         C[nC + 1] <-- A[i]; nC <-- nC + 1;
     
+    // Initial index for B and C lists
+    b <-- 1; c <-- 1;
     // Copy the elements from B and C back to A, but in the right
     // order
-    b <-- 1; c <-- 1;
     for i from f to l repeat
-        // If true, copy only elements from list C to A
+        // If index b > nB, copy only elements from list C to A
         if (b > nB)
             then    A[i] <-- C[c];
                     c <-- c + 1;

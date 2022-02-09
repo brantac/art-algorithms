@@ -12,7 +12,7 @@ insertionSort(A)
     n <-- nA;
     for i from 2  to n repeat
         new <-- A[i]; k <-- i - 1;
-        while (aux < A[k]) do
+        while (new < A[k]) do
             A[k + 1] <-- A[k];
             k <-- k - 1;
         A[k + 1] <-- new;
